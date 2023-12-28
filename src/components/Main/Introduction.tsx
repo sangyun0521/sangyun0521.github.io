@@ -75,7 +75,7 @@ const Introduction: FunctionComponent = function () {
         </Section>
         <Section>
             <Head>
-                <Link to='/projects'> >>Projects</Link>
+                <Link to='/projects'>To Projects</Link>
             </Head>
         </Section>
     </Wrapper>

@@ -3,7 +3,7 @@ import styled from '@emotion/styled'
 import GlobalStyle from 'components/Common/GlobalStyle'
 import Footer from 'components/Common/Footer'
 import Header from 'components/Common/Header'
-import Introduction from 'components/Main/Introduction'
+import ProjectList from 'components/Projects/ProjectList'
 
 const Container = styled.div`
   display: flex;
@@ -11,15 +11,15 @@ const Container = styled.div`
   height: 100%;
 `
 
-const IndexPage: FunctionComponent = function () {
+const PostsPage: FunctionComponent = function () {
   return (
     <Container>
       <Header />
       <GlobalStyle />
-      <Introduction />
+      <ProjectList />
       <Footer />
     </Container>
   )
 }
 
-export default IndexPage
+export default PostsPage
