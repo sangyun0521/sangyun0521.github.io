@@ -33,10 +33,13 @@ const TitleWrapper = styled.div`
 const Header: FunctionComponent = function () {
   return (
     <HeaderWrapper>
-      <TitleWrapper>Sangyun's Blog</TitleWrapper>
+      <TitleWrapper><Link to="/">Sangyun's Blog</Link></TitleWrapper>
       <MenuWrapper>
         <Item>
           <Link to="/">Home</Link>
+        </Item>
+        <Item>
+          <Link to="/about">About</Link>
         </Item>
         <Item>  
           <Link to="/projects">Projects</Link>

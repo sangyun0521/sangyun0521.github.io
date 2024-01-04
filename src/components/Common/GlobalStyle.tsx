@@ -18,7 +18,7 @@ const defaultStyle = css`
   }
 
   body{
-    background-color: #17171B;
+    background-color: #17171B; //#202632;
     color: #FFFFFF
   }
 

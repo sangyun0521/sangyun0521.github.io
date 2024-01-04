@@ -1,7 +1,11 @@
 import React, { FunctionComponent } from 'react'
 import styled from '@emotion/styled'
 import ProjectItem from './ProjectItem'
-import * as projects from './Projects'
+import { ProjectListItemType } from 'types/ProjectItem.types'
+
+type ProjectListProps = {
+  projects: ProjectListItemType[]
+}
 
 const ProjectListWrapper = styled.div`
   display: grid;
@@ -12,15 +16,18 @@ const ProjectListWrapper = styled.div`
   padding: 50px 0 100px;
 `
 
-const ProjectList: FunctionComponent = function () {
+const ProjectList: FunctionComponent<ProjectListProps> = function ({
+  projects,
+}) {
   return (
     <ProjectListWrapper>
-        <ProjectItem {...projects.POKEMON_GENERATOR}></ProjectItem>
-        <ProjectItem {...projects.VISUAL_PROMPT_TUNING}></ProjectItem>
-        <ProjectItem {...projects.IGRIM}></ProjectItem>
-        <ProjectItem {...projects.JUBGING}></ProjectItem>
-        <ProjectItem {...projects.CAU_ALUMNI_NETWORK}></ProjectItem>
-        {/* <ProjectItem {...projects.HOW_MANY_SEATS}></ProjectItem> */}
+        {projects.map(
+          ({
+              node: {id, fields: {slug}, frontmatter}
+          }: ProjectListItemType) => (
+            <ProjectItem {...frontmatter} link={slug} key={id} />
+          ),
+        )}
     </ProjectListWrapper>
   )
 }

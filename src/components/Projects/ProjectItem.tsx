@@ -1,15 +1,10 @@
 import React, { FunctionComponent } from 'react'
 import styled from '@emotion/styled'
 import { Link } from 'gatsby'
+import { GatsbyImage } from 'gatsby-plugin-image'
+import { ProjectFrontmatterType } from 'types/ProjectItem.types'
 
-type ProjectItemProps = {
-  title: string
-  date: string
-  categories: string[]
-  summary: string
-  thumbnail: string
-  link: string
-}
+type ProjectItemProps = ProjectFrontmatterType & {link: string}
 
 const ProjectItemWrapper = styled(Link)`
   display: flex;
@@ -24,11 +19,10 @@ const ProjectItemWrapper = styled(Link)`
   }
 `
 
-const ThumbnailImage = styled.img`
+
+const ThumbnailImage = styled(GatsbyImage)`
   width: 100%;
-  height: 200px;
-  border-radius: 10px 10px 0 0;
-  object-fit: cover;
+  height: 100%;
 `
 
 const ProjectItemContent = styled.div`
@@ -92,18 +86,21 @@ const ProjectItem: FunctionComponent<ProjectItemProps> = function ({
   date,
   categories,
   summary,
-  thumbnail,
+  thumbnail: {
+    childImageSharp: {gatsbyImageData}
+  },
   link,
 }) {
   return (
     <ProjectItemWrapper to={link}>
-        <ThumbnailImage src={thumbnail} alt="Project Item Image" />
+        <ThumbnailImage image={gatsbyImageData} alt="Project Item Image" />
         <ProjectItemContent>
             <Title>{title}</Title>
             <Date>{date}</Date>
-            <Category>{categories.map(category => (
-                <CategoryItem key={category}>{category}</CategoryItem>
-            ))}</Category>
+            <Category>{categories.map(item => (
+                <CategoryItem key={item}>{item}</CategoryItem>
+              ))}
+            </Category>
             <Summary>{summary}</Summary>
         </ProjectItemContent>
     </ProjectItemWrapper>

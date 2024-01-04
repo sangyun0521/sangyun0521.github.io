@@ -1,25 +1,42 @@
 import React, { FunctionComponent } from 'react'
-import styled from '@emotion/styled'
-import GlobalStyle from 'components/Common/GlobalStyle'
-import Footer from 'components/Common/Footer'
-import Header from 'components/Common/Header'
 import Introduction from 'components/Main/Introduction'
+import { IGatsbyImageData } from 'gatsby-plugin-image'
+import { graphql } from 'gatsby'
+import Template from 'components/Common/Template'
 
-const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-`
+type ProfileImageProps = {
+  data: {
+    file: {
+      childImageSharp: {
+        gatsbyImageData: IGatsbyImageData
+      }
+    }
+  }
+}
 
-const IndexPage: FunctionComponent = function () {
+const IndexPage: FunctionComponent<ProfileImageProps> = function ({
+  data: {
+    file: {
+      childImageSharp: { gatsbyImageData },
+    },
+  },
+}) {
   return (
-    <Container>
-      <Header />
-      <GlobalStyle />
-      <Introduction />
-      <Footer />
-    </Container>
+    <Template>
+      <Introduction profileImage={gatsbyImageData}/>
+    </Template>
   )
 }
+
+export const getProfileImage = graphql`
+  query getProfileImage {
+    file(name: { eq: "profile-image" }) {
+      childImageSharp {
+        gatsbyImageData(width: 120, height: 120)
+      }
+    }
+  }
+`
+
 
 export default IndexPage
