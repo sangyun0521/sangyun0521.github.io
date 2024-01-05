@@ -40,7 +40,12 @@ const MarkdownRenderer = styled.div`
 
   strong {
     font-weight: 900;
-    color: #0064FF;
+  }
+
+  aside {
+      margin: 10px 10px;
+      padding: 10px 10px;
+      background-color: #333333;
   }
 
   hr + h1,

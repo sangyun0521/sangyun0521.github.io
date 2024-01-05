@@ -2,6 +2,7 @@ import React, { FunctionComponent } from 'react'
 import { graphql } from 'gatsby'
 import Template from 'components/Common/Template'
 import Content from 'components/Content'
+import 'katex/dist/katex.min.css';
 
 type PostTemplateProps = {}
 
