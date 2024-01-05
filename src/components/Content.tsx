@@ -84,19 +84,9 @@ const MarkdownRenderer = styled.div`
 
   // Adjust Link Element Style
   a {
-    display: inline-block;
-    text-decoration: none;
-    color: white;
-    border: 1px solid gray;
-    border-radius: 5px;
+
     padding: 10px;
     margin: 10px;
-    transition: box-shadow 0.3s ease;
-  }
-
-  a:hover {
-  box-shadow: 0px 0px 11px 1px rgba(0, 0, 0, 0.1);
-  background-color: gray;
   }
 
   // Align Image Center

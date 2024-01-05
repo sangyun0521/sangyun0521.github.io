@@ -3,7 +3,7 @@ date: '2022-07-01'
 title: 'CAU Alumni Network'
 categories: ['SpringBoot']
 summary: 'Web Service for alumni of Chung-Ang University, Colleg of Software'
-thumbnail: './cau.png'
+thumbnail: '../../static/cau.png'
 ---
 
 # CAU ALUMNI NETWORK
@@ -22,8 +22,3 @@ CAU Alumni Network Github Link
 
 - 게시판 게시물 삭제 API 개발
 - 쪽지 기능 기획
-
-### ⚡ 깨달은 점
-
-- 기본적인 협업 프로세스, 깃 사용법에 대해 익히게 되는 계기가 되었습니다.
-- SpringBoot를 통해 처음 개발을 진행하며 라이브러리에 대한 사용법을 익히게 된 계기가 되었습니다.

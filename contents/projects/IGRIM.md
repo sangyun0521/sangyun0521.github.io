@@ -3,7 +3,7 @@ date: '2023-03-01'
 title: 'IGRIM'
 categories: ['SpringBoot', 'PyTorch', 'OpenCV', 'Flutter']
 summary: 'Stable Diffusion 모델을 활용한 동화책 서비스'
-thumbnail: './IGRIM.png'
+thumbnail: '../../static/IGRIM.png'
 ---
 
 # IGRIM
@@ -31,8 +31,3 @@ IGRIM Github Link
 - Prompt Engineering을 통한 user-written prompt에서 character variation feature 추출 (ChatGPT API 활용)
 - AI 모델 배포 (Google Cloud, SpringBoot)
 - 프론트엔드 개발 (Flutter)
-
-### ⚡ 깨달은 점
-
-- AI 모델 배포 시 inference time 을 줄여주기 위해 모델 최적화의 필요성을 느낌
-- 모델에 대한 환경 변수 설정 및 서버 환경을 효율적으로 관리 및 Migration 위해 Docker의 필요성을 느낌
