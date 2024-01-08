@@ -89,9 +89,14 @@ const MarkdownRenderer = styled.div`
 
   // Adjust Link Element Style
   a {
-
+    display: block;
+    border: 2px solid #555555;
+    border-radius: 5px;
     padding: 10px;
-    margin: 10px;
+  }
+
+  a:hover {
+    border: 2px solid #ffffff;
   }
 
   // Align Image Center
