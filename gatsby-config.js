@@ -13,6 +13,7 @@ module.exports = {
     //     stripQueryString: true,
     //   },
     // },
+    `gatsby-plugin-netlify-cms`, 
     {
       resolve: 'gatsby-plugin-typescript',
       options: {
