@@ -41,12 +41,12 @@ category: Machine Learning
 
     * 이는 실험에서 F가 대부분 매우 작은 값을 가졌다는 것을 보이며 H(x)가 Identity에 가까운 경우가 많으며 따라서 더 최적화가 쉬워진다고 주장한다.
 
-    ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/b8ce6778-d5c0-404f-842c-bec1c153f393/47e5cd0b-d696-4d1b-9ff6-1e1ed8bd3815/Untitled.png)
+    ![Untitled](resnet_skip_connection.png)
 * Bottleneck 구조
 
   * 더 빠르고 효율적인 모델을 위해 Bottleneck 구조를 통해 연산량을 줄여준다. (오)
 
-  ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/b8ce6778-d5c0-404f-842c-bec1c153f393/a4a28e0e-2f79-4592-8afc-d4ed67106ecc/Untitled.png)
+  ![Untitled](resnet_bottleneck.png)
 
 ### MobileNetV2
 
@@ -62,7 +62,7 @@ category: Machine Learning
     * 기존 : (3*3*M) * N
     * Depthwise: (3*3*M), PointWise : (1*1*M*N)
 
-  ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/b8ce6778-d5c0-404f-842c-bec1c153f393/9370f71b-fa10-4a79-902e-b975c6da4174/Untitled.png)
+  ![Untitled](mobilenet_depthwise.png)
 * Inverted Residual
 
   * Bottleneck 구조를 반대로 사용 narrow → wide → narrow
