@@ -1,6 +1,18 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: sangyun0521.github.io
   branch: master
+  display_url: snagyun0521.github.io
+  auth_endpoint: /oauth/auth
+
+  commit_messages:
+    create: Create {{collection}} “{{slug}}”
+    update: Update {{collection}} “{{slug}}”
+    delete: Delete {{collection}} “{{slug}}”
+    uploadMedia: Upload “{{path}}”
+    deleteMedia: Delete “{{path}}”
+    openAuthoring: '{{message}}'
+D
 
 media_folder: static/img
 public_folder: /img
