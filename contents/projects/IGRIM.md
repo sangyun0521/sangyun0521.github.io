@@ -3,7 +3,7 @@ date: '2023-03-01'
 title: 'IGRIM'
 categories: ['SpringBoot', 'PyTorch', 'OpenCV', 'Flutter']
 summary: 'Stable Diffusion 모델을 활용한 동화책 서비스'
-thumbnail: '../../static/IGRIM.png'
+thumbnail: '../../static/img/IGRIM.png'
 ---
 
 # IGRIM

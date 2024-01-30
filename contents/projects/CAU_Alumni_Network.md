@@ -3,7 +3,7 @@ date: '2022-07-01'
 title: 'CAU Alumni Network'
 categories: ['SpringBoot']
 summary: 'Web Service for alumni of Chung-Ang University, Colleg of Software'
-thumbnail: '../../static/cau.png'
+thumbnail: '../../static/img/cau.png'
 ---
 
 # CAU ALUMNI NETWORK

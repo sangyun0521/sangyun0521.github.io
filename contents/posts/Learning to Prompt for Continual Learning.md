@@ -46,7 +46,7 @@ L2P는 위의 두가지 방식을 사용하지 않고 Continual Learning의 문�
 
   - 이 방식을 사용하여 Test Time에 Task Identity에 대해 알지 못하더라도 Similarity를 통해서 해당 Task에 맞는 Prompt를 선택하게 해 줄 수 있다.
   - 이 방식을 사용하면 비슷한 Task 끼리 Prompt가 공유되어 Knowledge Sharing 이 가능하다.
-    ![L2P_fig2](../../static/L2P_fig2.png)
+    ![L2P_fig2](../../static/img/L2P_fig2.png)
 
 # Details
 
@@ -80,7 +80,7 @@ L2P는 위의 두가지 방식을 사용하지 않고 Continual Learning의 문�
 
 - 그렇다면 Prompt를 선택하는 식은 다음과 같아진다.
 
-  ![L2P_eq3](../../static/l2p_eq3.png)
+  ![L2P_eq3](../../static/img/l2p_eq3.png)
 
 - 위의 식에서 $K_x$는 Input과 가장 비슷한 Top N개의 Prompt Key들이다.
 
@@ -90,13 +90,13 @@ L2P는 위의 두가지 방식을 사용하지 않고 Continual Learning의 문�
 
 - 이 때, 각 Task 별로 Prompt Frequency 테이블 $H_t = [h_1, h_2, ..., h_M]$을 저장하고 새로운 Task를 학습시에 freqeuncy 만큼의 패널티를 주어 Task마다 더 다양한 Prompt를 선택하도록 유도 할 수 있다. 선택적으로 각 Task가 서로 다른 경우에 이 식을 Training 시에 적용 할 수 있다.
 
-  ![L2P_eq4](../../static/l2p_eq4.png)
+  ![L2P_eq4](../../static/img/l2p_eq4.png)
 
 ### Loss
 
 - ViT 모델 학습시에 Loss는 다음과 같다.
 
-  ![L2P_eq5](../../static/l2p_eq5.png)
+  ![L2P_eq5](../../static/img/l2p_eq5.png)
 
 - 가장 앞의 term은 사전 학습된 ViT 모델 $f_r^{avg}$ 와 final classifier $g_{\theta}$를 통해 cross-entorpy를 적용한 것을 의미한다.
 
@@ -116,7 +116,7 @@ L2P는 위의 두가지 방식을 사용하지 않고 Continual Learning의 문�
 
 - Task-agnostic learning의 경우 class-incremental learning과 유사하지만 task가 순차적으로 학습되는 것이 어느 task가 학습될지 모르는 경우를 의미한다. 따라서 Training시에 순차적으로 학습하는 것이 아닌 모든 task를 한 번에 학습한다.
 
-![L2P_table1](../../static/l2p_table1.png)
+![L2P_table1](../../static/img/l2p_table1.png)
 
 - 이 실험은 class-incremental setting (uknown task identity at test time)에 대한 실험이다. CIFAR-100 데이터 셋을 10개의 Task로 나누어 실험한 것과 별개의 5개 데이터 셋을 하나의 Task로 실험한 결과이다.
 
@@ -132,7 +132,7 @@ L2P는 위의 두가지 방식을 사용하지 않고 Continual Learning의 문�
 
 ### Prompt Selection
 
-![l2p_fig3](../../static/l2p_fig3.png)
+![l2p_fig3](../../static/img/l2p_fig3.png)
 
 - 위의 그림은 Split-CIFAR-100 (좌), 5-dataset (우) 데이터 셋에 대해 Prompt Frequency를 측정한 것이다.
 

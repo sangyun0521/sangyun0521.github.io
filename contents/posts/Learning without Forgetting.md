@@ -139,7 +139,7 @@ $$
 
 # Experiments
 
-![**Table 1. AlexNet 기반 Single new task scenario**](../../static/lwf_table1.png)
+![**Table 1. AlexNet 기반 Single new task scenario**](../../static/img/lwf_table1.png)
 
 **Table 1. AlexNet 기반 Single new task scenario**
 
@@ -156,7 +156,7 @@ Joint Training은 이전 task의 데이터를 사용하는 방식이기 때문�
 2. old task에 대해서 fine-tuning이 가장 안 좋은 성능을 보이는 것을 알 수 있다. Fine-tuning은 shared parameter까지 학습하기 때문에 forgetting이 가장 많이 일어나기 때문이다.
    이전 task의 데이터를 사용하는 joint training의 경우 old task의 성능이 가장 잘 유지되는 것을 확인 할 수 있다.
 
-![Figure7. Visualization for both new and old task performance for compared methods, with different weight losses](../../static/lwf_figure7.png)
+![Figure7. Visualization for both new and old task performance for compared methods, with different weight losses](../../static/img/lwf_figure7.png)
 
 Figure7. Visualization for both new and old task performance for compared methods, with different weight losses
 
@@ -166,6 +166,6 @@ $\lambda_0$얼마나 regularization을 많이 줄지를 설정해 줄 수 있다
 
 이 값이 작을 수록 old task에 대한 performance가 떨어지고 newtask에 대한 performance가 증가한다.
 
-![Untitled](../../static/lwf_myresult.png)
+![Untitled](../../static/img/lwf_myresult.png)
 
 내가 진행했던 프로젝트에서 LwF를 이용해 Forgetting을 줄여주었다. Generator 모델의 학습 자체가 최적화되지 않아 Accuracy가 잘 나오지는 않았지만 weight를 조절함에 따라 새로운 Task에 대한 성능과 Forgetting 정도를 조절 할 수 있음을 배웠다.

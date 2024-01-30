@@ -3,14 +3,14 @@ date: '2023-09-01'
 title: 'Visual Prompt Tuning'
 categories: ['학부연구생']
 summary: '이미지 형태의 Prompt를 학습하여 ViT 모델을 Continual Learning setting에서 Fine-tuning'
-thumbnail: '../../static/vpt.png'
+thumbnail: '../../static/img/vpt.png'
 ---
 
 # Visual Prompt Tuning
 
 _학부연구생 프로젝트 (2023.09 ~ 2023.12)_
 
-![vpt_1](../../static/vpt_1.png)
+![vpt_1](../../static/img/vpt_1.png)
 
 ### Visual Prompt Tuning
 
@@ -44,7 +44,7 @@ Patch Embedding Layer를 포함 할 경우
 Patch Embeeding Layer를 포함하지 않는 경우
 
 - Accuracy : 84.3%, Forgetting : 6.53%
-  ![table_1](./vpt_table_1.png)
+  ![table_1](../../static/img/vpt_table_1.png)
 
 - Prompt의 개수, Dimension 모두 L2P와 동일하게 맞춰주기 위해 이미지의 dimension 변형을 진행
 - 이미지 형태가 더 나은 Initialization 성능이라는 것을 알게됨
@@ -59,8 +59,8 @@ Patch Embeeding Layer를 포함하지 않는 경우
 
 1. Image Prompt Generator
 
-![vpt_2](../../static/vpt_2.png)
-![vpt_table_2](../../static/vpt_table_2.png)
+![vpt_2](../../static/img/vpt_2.png)
+![vpt_table_2](../../static/img/vpt_table_2.png)
 
 - VAE 모델을 사용하여 Training 이미지를 생성하도록 학습
 - 모델이 추가 되는 경우 학습이 더 어려움 + Forgetting이 발생
@@ -68,8 +68,8 @@ Patch Embeeding Layer를 포함하지 않는 경우
 
 2. CLS Token Generator
 
-![vpt_3](../../static/vpt_3.png)
-![vpt_table_3](../../static/vpt_table_3.png)
+![vpt_3](../../static/img/vpt_3.png)
+![vpt_table_3](../../static/img/vpt_table_3.png)
 
 - Training 이미지 보다 더 적은 차원을 사용하는 CLS 토큰을 사용
 - 학습이 더 잘되는 모습
@@ -79,8 +79,8 @@ Patch Embeeding Layer를 포함하지 않는 경우
 
 3. Generator with Prompt Pool
 
-![vpt_4](../../static/vpt_4.png)
-![vpt_table_4](../../static/vpt_table_4.png)
+![vpt_4](../../static/img/vpt_4.png)
+![vpt_table_4](../../static/img/vpt_table_4.png)
 
 - Generator를 사용한 방식 중 가장 성능이 좋음
 - Generator를 더 최적화하면 성능 향상이 기대됨
@@ -89,10 +89,10 @@ Patch Embeeding Layer를 포함하지 않는 경우
 4. Generator with Prompt Pool (LwF)
 
 **Generator with Prompt Pool**
-![vpt_table_6](../../static/vpt_table_6.png)
+![vpt_table_6](../../static/img/vpt_table_6.png)
 
 **Generator with Prompt Pool (LwF)**
-![vpt_table_7](../../static/vpt_table_7.png)
+![vpt_table_7](../../static/img/vpt_table_7.png)
 
 - 각 Task 별 성능을 나타낸 표
 - 가로 축은 각 task를 의미
@@ -102,23 +102,23 @@ Patch Embeeding Layer를 포함하지 않는 경우
 - 기존 Task의 Forgetting은 감소
 - 성능의 감소와 Forgetting의 감소가 Trade Off 되어 적절한 LwF의 Weigth를 적용해주어야 함
 
-![vpt_table_5](../../static/vpt_table_5.png)
+![vpt_table_5](../../static/img/vpt_table_5.png)
 
 ### 경향성 분석
 
 Generator 모델이 생성한 이미지 형태의 Prompt가 특정 Class에서 선택된 빈도를 분석
 
-![vpt_5](../../static/vpt_5.png)
+![vpt_5](../../static/img/vpt_5.png)
 
 - Prompt는 Training Image로 부터 initialized
 - 왼쪽 부터 순서대로 0~9번 Prompt
 - Apple, Boy, Maple, Mountain, Bee, Chair, Lion, Poppy, Crab, Bus
 
 **Apple**
-![vpt_table_8](../../static/vpt_table_8.png)
+![vpt_table_8](../../static/img/vpt_table_8.png)
 
 **Baby**
-![vpt_table_9](../../static/vpt_table_9.png)
+![vpt_table_9](../../static/img/vpt_table_9.png)
 
 - Apple의 경우 Boy, Mountain, Chair, Poppy 가 가장 많이 선택 되었음
 - 0번 Apple이 가장 많이 선택 되는 것을 기대했지만 결과는 그렇지 않음
@@ -126,7 +126,7 @@ Generator 모델이 생성한 이미지 형태의 Prompt가 특정 Class에서 �
 
 ### Results
 
-![vpt_table_10](../../static/vpt_table_10.png)
+![vpt_table_10](../../static/img/vpt_table_10.png)
 
 - 이미지 형태로 Prompt를 학습하여 ViT 모델의 모든 Layer를 사용하여 성능 향상을 목표로 하였지만 Patch Embedding Layer를 사용시 이미지 Dimension과 Prompt Length가 맞지 않는 문제가 발생
 - 이미지 형태로 Prompt를 학습하여 Causal Inference 진행을 목표로 했지만 Class 별 Prompt 선택되는 Frequency에서 유의미한 관계성을 찾지 못하였음

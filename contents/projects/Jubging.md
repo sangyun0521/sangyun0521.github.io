@@ -3,7 +3,7 @@ date: '2022-09-01'
 title: 'Jubging'
 categories: ['SpringBoot', 'Android', 'Arduino']
 summary: 'Special running application for "Plogging" activity'
-thumbnail: '../../static/jubging.png'
+thumbnail: '../../static/img/jubging.png'
 ---
 
 # Jubging (줍깅)
@@ -12,7 +12,7 @@ thumbnail: '../../static/jubging.png'
 Jubging Github Link
 </a>
 
-![jubging_ui](../../static/jubging_ui.png)
+![jubging_ui](../../static/img/jubging_ui.png)
 
 🚮 줍깅이란, 줍다와 조깅을 결합한 단어로 거리에 버려진 쓰레기를 최대한 많이 주우며 목적지 까지 가벼운 조깅으로 가는 환경보호 운동입니다. 줍깅 활동을 활성화 시키기 위해 줍깅 활동으로 배출한 쓰레기의 무게를 측정하는 쓰레기 통을 제작하여 배출한 무게 만큼 상점에서 사용 할 수 있는 포인트로 바꿔주는 서비스를 개발하였습니다.
 

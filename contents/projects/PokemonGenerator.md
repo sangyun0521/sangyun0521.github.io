@@ -3,7 +3,7 @@ date: '2023-09-01'
 title: 'Pokemon Generator'
 categories: ['PyTorch', 'Beautiful Soup']
 summary: 'Stable Diffusion Fine-Tuning'
-thumbnail: '../../static/pokemon.jpg'
+thumbnail: '../../static/img/pokemon.jpg'
 ---
 
 # Pokemon Generator
@@ -12,8 +12,8 @@ thumbnail: '../../static/pokemon.jpg'
     Pokemon Generator Github Link
 </a>
 
-![pokemon_generator_model](../../static/pokemon_generator_model.png)
-![pokemon_generator_image](../../static/pokemon_generator_image.png)
+![pokemon_generator_model](../../static/img/pokemon_generator_model.png)
+![pokemon_generator_image](../../static/img/pokemon_generator_image.png)
 
 | Height | Weight | Attack | Defense | SP Attack | SP Defense |
 | :----: | :----: | :----: | :-----: | :-------: | :--------: |
