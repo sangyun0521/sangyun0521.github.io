@@ -1,8 +1,8 @@
 backend:
   name: git-gateway
   repo: sangyun0521.github.io
-  branch: master
-  display_url: snagyun0521.github.io
+  branch: develop
+  display_url: sangyun.netlify.app
   auth_endpoint: /oauth/auth
 
   commit_messages:
