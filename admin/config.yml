@@ -1,8 +1,8 @@
 backend:
-  name: github
+  name: git-gateway
   repo: sangyun0521.github.io
   branch: master
-  display_url: snagyun0521.github.io
+  display_url: sangyun.netlify
   auth_endpoint: /oauth/auth
 
   commit_messages:
@@ -12,7 +12,6 @@ backend:
     uploadMedia: Upload “{{path}}”
     deleteMedia: Delete “{{path}}”
     openAuthoring: '{{message}}'
-
 
 media_folder: static/img
 public_folder: /img
@@ -31,5 +30,5 @@ collections:
     fields:
       - { label: 'title', name: 'title', widget: 'string' }
       - { label: 'date', name: 'date', widget: 'datetime' }
-      - { label: 'category', name: 'category', widget: 'string'}
+      - { label: 'category', name: 'category', widget: 'string' }
       - { label: 'Body', name: 'body', widget: 'markdown' }
