@@ -1,0 +1,35 @@
+backend:
+  name: github
+  repo: sangyun0521.github.io
+  branch: master
+  display_url: snagyun0521.github.io
+  auth_endpoint: /oauth/auth
+
+  commit_messages:
+    create: Create {{collection}} “{{slug}}”
+    update: Update {{collection}} “{{slug}}”
+    delete: Delete {{collection}} “{{slug}}”
+    uploadMedia: Upload “{{path}}”
+    deleteMedia: Delete “{{path}}”
+    openAuthoring: '{{message}}'
+D
+
+media_folder: static/img
+public_folder: /img
+
+collections:
+  - name: 'blog'
+    label: 'Blog'
+    folder: 'contents/posts'
+    create: true
+    slug: '{{title}}'
+    media_folder: ''
+    public_folder: ''
+    path: '{{title}}'
+    editor:
+      preview: false
+    fields:
+      - { label: 'title', name: 'title', widget: 'string' }
+      - { label: 'date', name: 'date', widget: 'datetime' }
+      - { label: 'category', name: 'category', widget: 'string'}
+      - { label: 'Body', name: 'body', widget: 'markdown' }
