@@ -1,7 +1,7 @@
 ---
 title: "SpringBoot + Docker + GithubAction CI/CD "
 date: 2024-01-30T09:09:16.976Z
-category: Computer Science
+category: Web
 ---
 현재 상황 :
 
